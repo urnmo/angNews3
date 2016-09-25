@@ -70,15 +70,32 @@ header{
 
     #mainView{
         @include grid-column(9);
-     .article{
+        margin: 0;
+        padding: 0;
+
+    .article{
         list-style: none;  
         }
+
+    };
         #newsCon{
-        margin: 20px;
-        height: 400px;
+        margin: 20px 0px;
+        height: 500px;
         overflow: scroll;  
         border: 3px solid $color-primary-1;
         background-color: lighten($color: $color-primary-1, $amount: 55%);
+        
+        .articleLook{
+        @include grid-row();
+        margin: 0;
+        padding: 0;
+
+        #artBot{
+        background: $color-primary-1;
+        @include grid-row();
+        margin: 0;
+        padding: 0;
+        }
 }
     }
 
