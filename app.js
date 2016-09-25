@@ -1,12 +1,21 @@
 let app = angular.module("newsApp", []);
 
+app.component('articles', {
+    templateUrl: 'article.html',
+    bindings: {
+        readable: '<',
+    },
 
+});
 //create controller
 app.controller("NewsController", function($scope, NewsGetter){
     $scope.news = NewsGetter.getNews();
 
 $scope.addToStarred = function(){
     console.log('working?');
+//function needs to add articles to the starred group
+//where must starred group exist? a component
+
 
 };
 });

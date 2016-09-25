@@ -27,7 +27,8 @@
         <section id="mainView" ng-controller="NewsController">
             <div id="newsCon">
                 <ul>
-                    <li class="article" ng-repeat="article in news"><i ng-click="addToStarred()" class="fa fa-star" aria-hidden="false"></i> {{ article.title }} </li>
+                    <articles ng-repeat="article in news" readable="article"></articles>
+
                 </ul>
             </div>
         </section>
