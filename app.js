@@ -1,12 +1,12 @@
 let app = angular.module("newsApp", []);
 
 app.component('articles', {
-    templateUrl: 'article.html',
+    templateUrl: 'components/article.html',
     bindings: {
         readable: '<',
     },
-
 });
+
 //create controller
 app.controller("NewsController", function($scope, NewsGetter){
     $scope.news = NewsGetter.getNews();

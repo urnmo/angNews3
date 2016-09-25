@@ -1,0 +1,7 @@
+<section class="articleLook">
+    <h2>{{$ctrl.article.title}}</h2>
+    <p>{{$ctrl.article.publisher.logo}} {{article.published}} {{$ctrl.article.publisher.name}}</p>
+    <p>{{$ctrl.article.summary}}</p>
+    <i ng-click="addToStarred()" class="fa fa-star" aria-hidden="false">FAVORITE</i>
+    <i ng-click="hide()" class="fa fa-minus-square" aria-hidden="true">HIDE</i>
+</section>
