@@ -8,7 +8,7 @@ let commentless = require('gulp-strip-css-comments');
 gulp.task('default', ['html', 'css', 'js']);
 
 gulp.task('html',function(){
-    return gulp.src('index.html')s
+    return gulp.src('index.html')
     .pipe(htmlhint())
     .pipe(htmlhint.reporter())
     .pipe(gulp.dest('public/'))

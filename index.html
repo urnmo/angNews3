@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="newsApp">
 
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
@@ -10,18 +10,28 @@
 
 <body>
     <header>
-        <img id="newsPic" src="http://justinlarge.com/images/button_icons/news_icon.jpg">
-        <h1>NEWS!</h1>
+        <img id="newsPic" src="https://cdn2.iconfinder.com/data/icons/budicon-document-2/16/3-document_-_article_news_newspaper-512.png">
+        <h1>SWANKY NEWS READER</h1>
 
     </header>
-    <section id="mainView" ng-controller="NewsController">
-        <div id="newsCon">
-            <ul>
-                <li class="article" ng-repeat="article in news"><i ng-click="addToStarred()" class="fa fa-star" aria-hidden="false"></i> {{ article.title }} </li>
-            </ul>
+    <section id="newsContainer">
+        <div id="sideNav">
+            <button class="btn" id="allButt">ALL</button>
+            <button class="btn" id="faveButt">FAVORITES</button>
+            <button class="btn" id="bloomButt">BLOOMBURG</button>
+            <button class="btn" id="NYTButt">NEW YORK TIMES</button>
+            <button class="btn" id="feedButt">BUZZFEED</button>
         </div>
-    </section>
 
+
+        <section id="mainView" ng-controller="NewsController">
+            <div id="newsCon">
+                <ul>
+                    <li class="article" ng-repeat="article in news"><i ng-click="addToStarred()" class="fa fa-star" aria-hidden="false"></i> {{ article.title }} </li>
+                </ul>
+            </div>
+        </section>
+    </section>
 
 </body>
 

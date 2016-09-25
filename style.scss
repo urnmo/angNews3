@@ -4,13 +4,84 @@
 @include foundation-grid;
 
 
+$color-primary-0: #2D3544;	// Main Primary color */
+$color-primary-1: #565F6F;
+$color-primary-2: #424B5D;
+$color-primary-3: #202B40;
+$color-primary-4: #15223A;
+
+.btn {
+  background: $color-primary-0;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1em;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin: 10px;
+  width: 75%;
+  box-shadow: 0px 1px 3px black;
+}
+
+body{
+        background-image: 
+        url("http://cdn.wallpapersafari.com/27/28/dCh0yA.jpg");
+        background-repeat: no-repeat;
+
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+};
+
 header{
     @include grid-row();
+    background-color: $color-primary-1;
+    
+    #blank{
+        width: 200px;
+    }
         h1{
             @include grid-column(9);
+            font-size: 3em;
         };
         #newsPic{
-            @include grid-column(3);
+            @include grid-column(1);
             width: 145px;
+            padding: 10px 10px;
+            margin: 0;
         }
     }
+
+#newsContainer{
+    @include grid-row();
+
+    #sideNav{
+        @include grid-column(3);
+        height: 600px;
+        padding: 20px 20px;
+        background-color: $color-primary-2;
+        button{
+            display: block;
+            height: 50px;
+        }
+    }
+
+    #mainView{
+        @include grid-column(9);
+     .article{
+        list-style: none;  
+        }
+        #newsCon{
+        margin: 20px;
+        height: 400px;
+        overflow: scroll;  
+        border: 3px solid $color-primary-1;
+        background-color: lighten($color: $color-primary-1, $amount: 55%);
+}
+    }
+
+ 
+}
+    
