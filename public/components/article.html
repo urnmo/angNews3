@@ -4,7 +4,7 @@
     <p>{{$ctrl.readable.published}} {{$ctrl.readable.publisher.name}}</p>
     <p>{{$ctrl.readable.summary}}</p>
     <div id="artBot">
-    <i ng-click="addToStarred()" class="fa fa-star" aria-hidden="false">FAVORITE</i>
-    <i ng-click="hide()" class="fa fa-minus-square" aria-hidden="true">HIDE</i>
+    <i ng-click="addToStarred($ctrl.readable)" class="fa fa-star" aria-hidden="false">FAVORITE</i>
+    <i ng-click="hide($ctrl.readable)" class="fa fa-minus-square" aria-hidden="true">HIDE</i>
     </div>
 </section>

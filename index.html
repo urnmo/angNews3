@@ -6,6 +6,7 @@
     <script src="app.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="../font-awesome-4.6.3/css/font-awesome.min.css">
+    <title>News Fetcher</title>
 </head>
 
 <body>
@@ -14,20 +15,20 @@
         <h1>SWANKY NEWS READER</h1>
 
     </header>
-    <section id="newsContainer">
+    <section id="newsContainer" ng-controller="NewsController">
         <div id="sideNav">
-            <button class="btn" id="allButt">ALL</button>
-            <button class="btn" id="faveButt">FAVORITES</button>
-            <button class="btn" id="bloomButt">BLOOMBURG</button>
-            <button class="btn" id="NYTButt">NEW YORK TIMES</button>
-            <button class="btn" id="feedButt">BUZZFEED</button>
+            <button ng-click="all()" class="btn" id="allButt">ALL</button>
+            <button ng-click="faves()" class="btn" id="faveButt">FAVORITES</button>
+            <button ng-click="bloom()" class="btn" id="bloomButt">BLOOMBURG</button>
+            <button ng-click="times()" class="btn" id="NYTButt">NEW YORK TIMES</button>
+            <button ng-click="buzz()" class="btn" id="feedButt">BUZZFEED</button>
         </div>
 
 
-        <section id="mainView" ng-controller="NewsController">
+        <section id="mainView">
             <div id="newsCon">
                 <ul>
-                    <articles ng-repeat="article in news" readable="article"></articles>
+                    <articles ng-if="article.hide === false" ng-repeat="article in news" readable="article"></articles>
 
                 </ul>
             </div>
